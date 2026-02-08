@@ -1,0 +1,11 @@
+{
+  "target": "deployment/hello-world",
+  "feature": {
+    "network": {
+      "incoming": "mirror",
+      "outgoing": true,
+      "dns": { "enabled": true }
+    },
+    "env": { "include": "^.*$" }
+  }
+}

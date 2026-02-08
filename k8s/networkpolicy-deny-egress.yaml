@@ -1,0 +1,12 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: hello-world-deny-egress
+  namespace: k8s-demo
+spec:
+  podSelector:
+    matchLabels:
+      app: hello-world
+  policyTypes:
+  - Egress
+  egress: []
