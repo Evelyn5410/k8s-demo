@@ -185,6 +185,7 @@ You can attach to exactly the pod you're suspicious of. No need to scale down to
 
 - **Autopilot won't work.** The mirrord agent needs capabilities Autopilot doesn't allow. Spent a while on this before switching to Standard.
 - **`target_namespace` in the config blows up on v3.186.0** with an `unknown field` parse error. Just pass `-n k8s-demo` on the CLI instead.
+  - I built a knowledge base skill that tracks repo changes and catches stuff like this — renamed/removed config properties across versions — so I don't get blindsided again. See: [claude knowledge base skill](https://github.com/Evelyn5410/github-knowledge-base).
 - **`service/hello-world` as a target didn't work** — apparently that needs the mirrord operator, which I didn't set up.
 - **Changes aren't hot-reloaded.** If you edit code, you need to restart `mirrord exec`. Node doesn't auto-reload here.
 - **`gcr.io` can be flaky** in orgs with restrictions. Artifact Registry worked fine.
